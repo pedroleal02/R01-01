@@ -7,6 +7,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import sorting.AbstractSorting;
+import sorting.simpleSorting.BubbleSort;
+import sorting.simpleSorting.SelectionSort;
+import sorting.simpleSorting.InsertionSort;
+
+import sorting.variationsOfBubblesort.BidirectionalBubbleSort;
+import sorting.variationsOfBubblesort.RecursiveBubbleSort;
+
+import sorting.variationsOfSelectionsort.RecursiveSelectionSort;
+
 
 public class StudentSortingTest {
 
@@ -36,10 +45,14 @@ public class StudentSortingTest {
 	 * do aluno
 	 */
 	private void getImplementation() {
-		// TODO O aluno deve instanciar sua implementação abaixo ao invés de
-		// null
-		this.implementation = null;
-		Assert.fail("Implementation not provided");
+		this.implementation = new BubbleSort<>();
+		this.implementation = new InsertionSort<>();
+		this.implementation = new SelectionSort<>();
+
+		this.implementation = new BidirectionalBubbleSort<>();
+		this.implementation = new RecursiveBubbleSort<>();
+
+		this.implementation = new RecursiveSelectionSort<>();
 	}
 
 	public void populaVetorTamanhoPar(Integer[] arrayPadrao) {

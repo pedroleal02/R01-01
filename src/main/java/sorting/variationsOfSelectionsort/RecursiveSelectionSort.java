@@ -1,6 +1,7 @@
 package sorting.variationsOfSelectionsort;
 
 import sorting.AbstractSorting;
+import util.Util;
 
 public class RecursiveSelectionSort<T extends Comparable<T>> extends
 		AbstractSorting<T> {
@@ -16,31 +17,23 @@ public class RecursiveSelectionSort<T extends Comparable<T>> extends
 	@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {
 		if (leftIndex > 0 && rightIndex < array.length) {
-			System.out.println("fazer");
+			if (leftIndex < rightIndex) {
+				int minor = minor(array, leftIndex, rightIndex);
+				Util.swap(array, leftIndex, minor);
+				sort(array, leftIndex + 1, rightIndex);
+			}
 		}
 	}
 
 	public int minor(T[] array, int leftIndex, int rightIndex) {
 		int minor = leftIndex;
-		int returnedValue;
 		if (leftIndex < rightIndex) {
+			int nextMin = minor(array, leftIndex+1, rightIndex);
 			if (array[leftIndex].compareTo(array[leftIndex+1]) < 0) {
-				minor = leftIndex+1;
+				minor = nextMin;
 			}
-			returnedValue = minor(array, leftIndex+1, rightIndex);
 		}
-		returnedValue = minor;
-		return returnedValue;
+		return minor;
 	}
-
-	/*@Override
-	public void sort(T[] array, int leftIndex, int rightIndex) {
-		if (leftIndex > 0 && rightIndex < array.length) {
-			for (int i = 0; i < rightIndex; i++) {
-				int menor = achaMenor(array, i, rightIndex);
-				swap(array, menor, i);
-			}
-		}
-	}*/
 
 }

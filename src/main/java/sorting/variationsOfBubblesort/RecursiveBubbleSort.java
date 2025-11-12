@@ -1,6 +1,7 @@
 package sorting.variationsOfBubblesort;
 
 import sorting.AbstractSorting;
+import util.Util;
 
 public class RecursiveBubbleSort<T extends Comparable<T>> extends
 		AbstractSorting<T> {
@@ -18,17 +19,10 @@ public class RecursiveBubbleSort<T extends Comparable<T>> extends
 		if (leftIndex > 0 && rightIndex < array.length) {
 			if (leftIndex < rightIndex) {
 				if (array[leftIndex].compareTo(array[leftIndex+1]) > 0) {
-					swap(array, leftIndex, leftIndex+1);
+					Util.swap(array, leftIndex, leftIndex+1);
 				}
 				sort(array, leftIndex+1, rightIndex);
 			}
 		}
 	}
-
-	public void swap(T[] array, int index1, int index2) { // modificar para puxar o swap do pacote util
-		T aux = array[index1];
-		array[index1] = array[index2];
-		array[index2] = aux;
-	}
-
 }

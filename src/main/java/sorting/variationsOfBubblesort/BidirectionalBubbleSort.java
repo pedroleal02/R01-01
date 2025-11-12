@@ -1,6 +1,7 @@
 package sorting.variationsOfBubblesort;
 
 import sorting.AbstractSorting;
+import util.Util;
 
 /**
  * This bubble sort variation has two internal iterations. In the first, it
@@ -17,18 +18,12 @@ public class BidirectionalBubbleSort<T extends Comparable<T>> extends
 		if (leftIndex > 0 && rightIndex < array.length) {
 			for (int i = 0; i < rightIndex; i++) {
 				for (int j = leftIndex + i; j < rightIndex - (i+1); j++) {
-					if (array[j].compareTo(array[j+1]) > 0) swap(array, j, j+1);
+					if (array[j].compareTo(array[j+1]) > 0) Util.swap(array, j, j+1);
 				}
 				for (int z = rightIndex - (i+1); z > leftIndex + (i+1); z++) {
-					if (array[z].compareTo(array[z-1]) < 0) swap(array, z, z-1);
+					if (array[z].compareTo(array[z-1]) < 0) Util.swap(array, z, z-1);
 				}
 			}
 		}
-	}
-
-	public void swap(T[] array, int index1, int index2) { // modificar para puxar o swap do pacote util
-		T aux = array[index1];
-		array[index1] = array[index2];
-		array[index2] = aux;
 	}
 }

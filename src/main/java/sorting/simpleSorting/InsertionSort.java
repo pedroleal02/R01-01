@@ -1,6 +1,7 @@
 package sorting.simpleSorting;
 
 import sorting.AbstractSorting;
+import util.Util;
 
 /**
  * As the insertion sort algorithm iterates over the array, it makes the
@@ -15,15 +16,9 @@ public class InsertionSort<T extends Comparable<T>> extends AbstractSorting<T> {
 		if (leftIndex > 0 && rightIndex < array.length) {
 			for (int i = 0; i < rightIndex; i++) {
 				for (int j = i; j > leftIndex; j++) {
-					if (array[j].compareTo(array[j - 1]) < 0) swap(array, j, j-1);
+					if (array[j].compareTo(array[j - 1]) < 0) Util.swap(array, j, j-1);
 				}
 			}
 		}
-	}
-
-	public void swap(T[] array, int index1, int index2) { // modificar para puxar o swap do pacote util
-		T aux = array[index1];
-		array[index1] = array[index2];
-		array[index2] = aux;
 	}	
 }
