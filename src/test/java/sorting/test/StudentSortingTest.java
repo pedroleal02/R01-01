@@ -119,4 +119,69 @@ public class StudentSortingTest {
 	 * SEGUIR A ESTRUTURA DOS MÉTODOS DE TESTE ACIMA DESCRITOS, ORDENANDO APENAS
 	 * UMA PARTE DO ARRAY.
 	 */
+
+	 @Test
+	 public void testSort07() {
+		Integer[] array = {10,17,5,12,11,10};
+		implementation.sort(array, 2,5);
+		Integer[] expected = {10,17,5,10,11,12};
+		Assert.assertArrayEquals(expected, array);
+	 }
+
+	 @Test
+	 public void testSort08() {
+		Integer[] array = {10,17,5,12,11,10};
+		implementation.sort(array, 0,5);
+		Integer[] expected = {5,10,10,11,12,17};
+		Assert.assertArrayEquals(expected, array);
+	 }
+
+	 @Test
+	 public void testSort09() {
+		Integer[] array = {2,2,7,2,2};
+		implementation.sort(array, 0,4);
+		Integer[] expected = {2,2,2,2,7};
+		Assert.assertArrayEquals(expected, array);
+	 }
+
+	 @Test
+	 public void testSort10() {
+		Integer[] array = {2,2,2,2,2};
+		implementation.sort(array, 0,4);
+		Integer[] expected = {2,2,2,2,2};
+		Assert.assertArrayEquals(expected, array);
+	 }
+
+	 @Test
+	 public void testSort11() {
+		Integer[] array = {1,10,14,17,19};
+		implementation.sort(array, 0,4);
+		Integer[] expected = {1,10,14,17,19};
+		Assert.assertArrayEquals(expected, array);
+	 }
+
+	 @Test
+	 public void testSort12() {
+		Integer[] array = {1,10,14,17,19};
+		implementation.sort(array, -2,4);
+		Integer[] expected = {1,10,14,17,19};
+		Assert.assertArrayEquals(expected, array);
+	 }
+
+	 @Test
+	 public void testSort13() {
+		Integer[] array = {1,10,14,17,19};
+		implementation.sort(array, 0,20);
+		Integer[] expected = {1,10,14,17,19};
+		Assert.assertArrayEquals(expected, array);
+	 }
+
+	 @Test
+	 public void testSort14() {
+		Integer[] array = {};
+		implementation.sort(array, 0,0);
+		Integer[] expected = {};
+		Assert.assertArrayEquals(expected, array);
+	 }
+
 }

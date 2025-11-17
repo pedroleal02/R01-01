@@ -13,17 +13,17 @@ import util.Util;
 public class BidirectionalBubbleSort<T extends Comparable<T>> extends
 		AbstractSorting<T> {
 
-	@Override
-	public void sort(T[] array, int leftIndex, int rightIndex) {
-		if (leftIndex > 0 && rightIndex < array.length) {
-			for (int i = 0; i < rightIndex; i++) {
-				for (int j = leftIndex + i; j < rightIndex - (i+1); j++) {
-					if (array[j].compareTo(array[j+1]) > 0) Util.swap(array, j, j+1);
-				}
-				for (int z = rightIndex - (i+1); z > leftIndex + (i+1); z++) {
-					if (array[z].compareTo(array[z-1]) < 0) Util.swap(array, z, z-1);
+		@Override
+		public void sort(T[] array, int leftIndex, int rightIndex) {
+			if (array != null && leftIndex >= 0 && rightIndex <= array.length) {
+				for (int i = 0; i < rightIndex; i++) {
+					for (int j = leftIndex; j < rightIndex - i - 1; j++) {
+						if (array[j].compareTo(array[j+1]) > 0) Util.swap(array, j, j+1);
+					}
+					for (int z = rightIndex; z > leftIndex + i + 1; z--) {
+						if (array[z].compareTo(array[z-1]) < 0) Util.swap(array, z, z-1);
+					}
 				}
 			}
 		}
-	}
 }
