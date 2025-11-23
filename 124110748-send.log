@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-11-12T08:35:45.349-0300</date>
+  <logger>PEDRO LEAL E LIMA</logger>
+  <level>FINE</level>
+  <message>File 124110748-PEDRO LEAL E LIMA.zip was received. It was sent by PEDRO LEAL E LIMA from IP 150.165.42.159 at 12-11-2025 08*35*45</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-11-13T15:30:53.533-0300</date>
+  <logger>PEDRO LEAL E LIMA</logger>
+  <level>FINE</level>
+  <message>File 124110748-PEDRO LEAL E LIMA.zip was received. It was sent by PEDRO LEAL E LIMA from IP 192.168.0.41 at 13-11-2025 15*30*53</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-11-13T18:40:02.038-0300</date>
+  <logger>PEDRO LEAL E LIMA</logger>
+  <level>FINE</level>
+  <message>File 124110748-PEDRO LEAL E LIMA.zip was received. It was sent by PEDRO LEAL E LIMA from IP 192.168.0.41 at 13-11-2025 18*40*01</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-11-17T15:03:27.457-0300</date>
+  <logger>PEDRO LEAL E LIMA</logger>
+  <level>FINE</level>
+  <message>File 124110748-PEDRO LEAL E LIMA.zip was received. It was sent by PEDRO LEAL E LIMA from IP 192.168.0.41 at 17-11-2025 15*03*27</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-11-23T01:05:32.057-0300</date>
+  <logger>PEDRO LEAL E LIMA</logger>
+  <level>FINE</level>
+  <message>File 124110748-PEDRO LEAL E LIMA.zip was received. It was sent by PEDRO LEAL E LIMA from IP 192.168.1.78 at 23-11-2025 01*05*31</message>
+</record>
